@@ -15,5 +15,5 @@ use Test::More tests => 2;
 
 
 is( get('/subclass0'), res('subclass0'), 'default' );
-is( get('/subclass1?p=5&page=333'), res('subclass1'), 'overrides' );
+is( get('/subclass1?page=333'), res('subclass1'), 'overrides' );
 

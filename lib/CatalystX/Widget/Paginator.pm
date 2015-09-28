@@ -6,11 +6,11 @@ CatalystX::Widget::Paginator - HTML widget for digg-style paginated DBIx::ResulS
 
 =head1 VERSION
 
-Version 0.04
+Version 0.06
 
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.06';
 
 use List::Util qw( min max );
 use Moose;
@@ -138,14 +138,15 @@ Usage subclassed widget in the controller:
 Widget renders (string representated) as HTML table with single row and
 multiple columns:
 
-  prefix  edge  side  delim     main      delim  side  edge  suffix
-  ------------------------------------------------------------------
-  Pages:   <<   1  2   ...   20 21 22 23   ...   40 41  >>   Total:x
+  prefix | edge | side | delim |  main  |  delim | side | edge | suffix
+  ----------------------------------------------------------------------
+  Pages:   <<     1  2    ...    7 >8< 9    ...    40 41   >>    Total:x
+  ----------------------------------------------------------------------
 
-Table has 'class' HTML attribute with a C<style> value. Cells 'class'
-named as C<style_prefix>C<block>, where the names of the blocks the same
-as in example above. Additionally, the current page marked with '<span>'
-tag having C<style_prefix>C<current> 'class' attribute.
+Table has HTML class attribute with a C<style> value. Cells HTML
+class attribute consists from C<style_prefix> and block name, where
+the names of the blocks the same as in example above. Current page framed
+with HTML span tag, others with links.
 
 =cut
 
