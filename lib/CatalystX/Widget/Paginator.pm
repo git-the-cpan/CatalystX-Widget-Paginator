@@ -6,11 +6,11 @@ CatalystX::Widget::Paginator - HTML widget for digg-style paginated DBIx::ResulS
 
 =head1 VERSION
 
-Version 0.06
+Version 0.07
 
 =cut
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 use List::Util qw( min max );
 use Moose;
